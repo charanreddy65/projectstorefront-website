@@ -1,250 +1,161 @@
-<!DOCTYPE html>
- 
-<html>
- 
+<html lang="en">
 <head>
-    <title>Simple online store</title>
- 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
- 
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: sticky;
-            top: 0;
-            cursor: pointer;
-        }
- 
-        .background {
-            background: black;
-            background-blend-mode: darken;
-            background-size: cover;
-        }
- 
-        .nav-list {
-            width: 70%;
-            display: flex;
-            align-items: center;
-        }
- 
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
- 
-        .logo img {
-            width: 180px;
-            border-radius: 50px;
-        }
- 
-        .nav-list li {
-            list-style: none;
-            padding: 26px 30px;
-        }
- 
-        .nav-list li a {
-            text-decoration: none;
-            color: white;
-        }
- 
-        .nav-list li a:hover {
-            color: grey;
-        }
- 
-        .rightnav {
-            width: 30%;
-            text-align: right;
-        }
- 
-        #search {
-            padding: 5px;
-            font-size: 17px;
-            border: 2px solid grey;
-            border-radius: 9px;
-        }
- 
-        .firstsection {
-            background-color: green;
-            height: 400px;
-        }
- 
-        .secondsection {
-            background-color: blue;
-            height: 400px;
-        }
- 
-        .box-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            max-width: 80%;
-            margin: auto;
-            height: 80%;
-        }
- 
-        .firsthalf {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
- 
-        .secondhalf {
-            width: 30%;
-        }
- 
-        .secondhalf img {
-            width: 70%;
-            border: 4px solid white;
-            border-radius: 150px;
-            display: block;
-            margin: auto;
-        }
- 
-        .text-big {
-            font-family: 'Piazzolla', serif;
-            font-weight: bold;
-            font-size: 35px;
-        }
- 
-        .text-small {
-            font-size: 18px;
-        }
- 
-        .btn {
-            padding: 8px 20px;
-            margin: 7px 0;
-            border: 2px solid white;
-            border-radius: 8px;
-            background: none;
-            color: white;
-            cursor: pointer;
-        }
- 
-        .btn-sm {
-            padding: 6px 10px;
-            vertical-align: middle;
-        }
- 
-        .section {
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 90%;
-            margin: auto;
-        }
- 
-        .section-Left {
-            flex-direction: row-reverse;
-        }
- 
-        .paras {
-            padding: 0px 65px;
-        }
- 
-        .thumbnail img {
-            width: 250px;
-            border: 2px solid black;
-            border-radius: 26px;
-            margin-top: 19px;
-        }
- 
-        .center {
-            text-align: center;
-        }
- 
-        .text-footer {
-            text-align: center;
-            padding: 30px 0;
-            font-family: 'Ubuntu', sans-serif;
-            display: flex;
-            justify-content: center;
-            color: white;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel='icon' href='C:\Users\Lenovo\Pictures\images\favicon.ico' type='ico/image'/>
 </head>
- 
 <body>
-    <nav class="navbar background">
-        <ul class="nav-list">
-            <div class="logo">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8QDw8VDxAPDw8QDxAQEBAPFRAQFREWFhcVFhUYHSkhGBonGxUYITEhJSkrLi4uFx8zODMsNyguLisBCgoKDg0OGxAQGy0lICUtLS8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAwECBQYHBAj/xABHEAACAgECAwUEBwMJBQkAAAABAgADEQQhBRIxBhNBUWEHInGBFCMyQlKRoRVysSQzYoKSosHR4UNzssLwJTRTVGN0k9LT/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAMEAQIFBv/EADQRAAIBAgMECQQCAgMBAAAAAAABAgMRBCExEkFR8AUTYXGBkaHB0RQiMrHh8SNCMzRSFf/aAAwDAQACEQMRAD8A6zERMmRERAEREAREQBEYlQIBSJeBKhYBHiVxJAscsAjxKYkvLBWARYiScsoVgFkS4iW4gCIiAIiIAiIgCIiAIiIAiIgCIiAIiVAgFMS4CVAl6rALQsuCy8LLwsAjCy4LJAsuCwCLkleWS8srywCHllOWT8spywCApLSs9JWWlYB5istKz0FZaVgHnKy0iTlZGywCyJUiUgCIiAIiIAiIgCIiAIiAIBUCXqIUSRVgBVkirKqskVYBaqy8LLgsuAgFoWXYlYmDBQiYujjFbaqzTdHQAg52c8uWUeoGP18pkL7Qis7HCopZj6AZM5TZq3a03AkO1htB8VYtzfpOdj8b9Nsdrz7t50cBgvqdu+Vll3vT3OtYjExvA+IDU0JZ0bdXA+646j/H5ie2m9XGUYMASCQQQCDgjbxyJfhUU4qS35lCcXCTjLVakuJaVl8TY1IistKyciWkTJk8zLI2WeorImWAeYrLCJ6GWRsIBFEqZSAIiIAiIgCIiABLwJQSRRALlElUS1Vmva3jNep1Gs4VXY2n1A0/1d6tj6xlyQuMYKhkPXJBbGOWaylYyotmb1vFKKGqS65KmvfkqDnBdsgYHzYD5jzmN1/a/SabUtptSz0OAjK9lZ7t1YfaDjOB1G+NwZp+irfiOiv4dqcjiOgLNSzseZ+XIGWO568hO+xRpZqAeLcN5sf9o8NytiY96xNwQR5kIT+8hHjK7rSa+1dq8NUWVQin9z32fjo12M6jptQliK9brYjgFXRgysD4gjYiTT5+7PdotRobA9DZQnNlLE8lg/5W/pDfzyNp2zgPGKtZQt9J2OzqftVuMZRvUf5HoZtRxCqrgzXEYaVF55riZWImD7RcaGlbT5+zZaRZ5isLgsPgWU/IySc1BbUtCGnTlUkoRV2/7HbDVd3o7MdbCKh8GO/90Gc45ptvtC1Xu6ZAchzZZkHY8oUA/wB+aZzzzPS89rEW4JfJ6foemo4ZS4tv29jK6DjFlFV9dZwbimG/BgEMR6kYHymV7DcR5LzQT7lwJUeVgGf1UH8hNWycZxtnGfWerg2oCaml2blVLA7MfBQCW/TMhw1epGrTzyjl4N589xYxOGpypVMs5Z+KWXPfxOugys0vgfaJtTxDBylTVWLXXnxDKQzebYB+HT47mJ6mjWjWi5Q0u15Hk6+HnQkoz1sn5lYiY7jPGaNHUbdQ4RBsB1Z2/Cq9WMmbtmyJK7sj3mWFZyDjntF1d5I0/wDJa/DHK9rDzLEYX4AfOavbxLUOeZ9Tex821Fxx8Pe2+UpTx0IvJXLsMDUavJpH0GyyFhOM8E7Za3SsPrm1FefeqvdrMj+i5yyn5kek69wniVeqorvpOUsGcHqrA4ZW9Qcj5SejiI1fx1Ia2HlS10JGEjxJ2EiYScgLYiIAiIgCBEqogF6iSqJYokyCAXqJw3tFqbKeK6m2tuW2rWWOjb7ENtnzGNiPImd1UTjvtR4WadebgPc1aK4Ph3iAIw/IIfmZTxqfVprcy5gZLrHF71/JluN6nmXS8e0K4ZSqa2obHY8jBvPpyE+RRuiy/i+oGk1Wm4zpctpNYFXVoNt2xklfxbZ/eTH3pr3Ybjtents0+pwdHrENdwfdUYryhj5KR7p/q+Utq46ulp1+gQLrNLazjTOWI7sn742977p2x7yk/e2hVWLjtXtf0kvZ86k/UyUti17esXu709C/t5wRaL11GnwdJrB31TL9lXb3mUehB5h8SPCV9nfHDpdaiMfqdUVqsBOyuTit8efMQvwb0mvW621qq6WtZqqiTXWWyqE+IHzP5meZ88pwSpwcMNiD4EesqOqlV245c5lqNJun1cnfnLxR9LznXtIv/lNKZ+xQT8C7n/6Cb7oL+8qrsOxetHI8uZQf8ZzL2jvjXn/c0/xeXOk/+u12r9lTodJ4pdz/AEYzV8RayuitznuFsRc/gYqVHywR8MSAAleYdObl/hvPF3kyNHuqVO+538wcTzdWTebzPUqKgrR4v1bfue2xQU5B0xgfEf6zE95PcbZjNY2Hb13/ADEhorVCCsZzsjqMa7TeGbCp/rIw/wAp12cQ7N2/y3R/+6pH5uBO3z03RWVKS7fZHnem1/mi+z3Z5eI62uiqy61uWupSznyA8vWcK7T8Zu1uo7673QVHc1ZyKam3UY6cxGCT47eAGOj+0a3vW0miOe6tazU6rH/l9OA+Pm2PmBOS3XtYzWN9qxi7Y6Ak5wPQdB6CZxtV32CDA00ltkcRE550ROl+yDUk16ynwR6bR6GxWU4/+MTmk6p7I9CV0195H8/dyL6pUMZ/tMw+UtYJPrVbtKuN/wCF+HPlc3VhImE9DCQsJ2jjEJlJcwlsAREQBL1EsEkWASIJMgkaCTIIBIomH7V8BTXaZqW91weemzGe7tAIB+GCQR5EzNLKzWSTVmZTcXdanzjrtDZRc1F691YhAYNnAz0YHG6nrkSzU6d6iBYpXmGUJwVdfxIw2YeozO7do+zWm1yctyYdQe7uT3XrJ8j4j0OR6TRLuxXE9JldLZXq6CSTVYFwfjVZlQfVWBM5VXCSi/tzR1aWMjJZ2T7fk5/JdNpHvdKav5y5hWn7zbZPoOp9AZnON8G19VRuu0VemqVgrtVVSu7EAEkMzAZIG2BuJkfZbqNOmuK2qO9sQrprCdlbcuoH4mXx/okeO8MKL6xReVyeVa1Nzjnbx5tvOv6ekIiovRFVR8AMCcv9qlfJq6n8LdOBnzKOc/o4/OdVmi+1bhxs0iXqMtprMtgf7J8Kx+APKfgDOni6e3RaKHRlRU8TFvfl55L1scwNkydd+VU56qP4TXzZPdpb8qPTInm6lPI9ilcyfezH6233z8BLjbjczGvaSSfMzFKlmZlGxn+ytqjW02WELXQTfYx+6laE5/tco+JE6/2a4uNZpl1ATkD2Xqqnrypc6An1IXOPWfP3eHffr19d8/8AXwnbvZnUV4Xps/eN7/Jr7GH6Gdvo+Vrw8f0cDpqithVW87pLu+5v1/Riu3DBdfp1chF1Wg1elR22VbSykZPhnIHzE5S9bKSrqUdSVdTsVYdQZ2T2m6PT2aB2ubkepubTt1JtO3IF8QwJB8uvhOO36hmxzuWwOUFjkgeAyd8ekixsLVG+JVwTvTy7vgsiULDxI36bibDwDsfrNYQVqNNWd7rlZBjxKKd3+W3rK8ISm7RVy1OUYK8nYx/A+E26y9KKRuxBd8ZFVefec/4DxOBO88N0KaemqioYrqRUUHc4AxknxJ6k+c8XZvs9RoajXUMs2Dba32rWx1PkPIDYTMkTsYagqSz1ZxsTiOtlloiFhIGE9DCQuJZK552lklaRmAUiIgFRJFkYkiwCZJOkhSTLAJBKygMtexVBZmCqBksTgAeZJmGYL4mlcb9pvDNMWVbTqrF+5pl5xnyNhwmfTmzNG4t7X9ZZkaWirTL+KzOofHmPsqD8mkcqkY6skjRnLRHZdbpkursqsXmrsRkdT4qRgzgPHNE2g1T0m3lapw1VvMoYrnKWD12/MGYfifafX6k/X625wfuLY1Sdc/Yrwp+YMxIUDO3U5PqfOU68o1LW3F7DRlSbvZ33HctB7VeHiittQ7jUcoFtVVFzjmGxIbl5cHGeviJ4uJe1rQOr1/Q7763VkYMKUVlYYIIL56HynGom31ErGn00L7zI28RXmbu6mCcx5A9gLBM7AkDc4xvKU8VK5+rBz4c5/wApj4lV04PcdH6yv/69F8GTt4wzDHIB5++f8pF+0P8A0/7/APpPDEKlBbh9bXf+3ovg944iP/DIP7wM652c9pXCqNNp6Ge6sU0118zad2BKqAT9XzHc7/OcUiS0mqTeyiDEzniElUencvY3ntj2sXiGoLB8UVZXTox5dvGxlP3m8vAYHnN/9n3ZNKqDfqUWy28bIyq4qq2IXfILHqfkPDfg89Gi1t1H/d77dPjf6i6yn47IRmZg4qo5yzIqibp7EMl+z6f03CdNWc16eqs+aVVofzAntE+f+F+1DilBAexNUg6rfWAx+DpjHzBm68G9sGkfA1dFmlO2XTOpr/ujn/umXY1YPJMoSoTXadMgzwcK4vptUnPpr0vXxNbBsehHUHbx8p78yUiImkLyd5A8yZIXkRkryIwCkREAqJKshElWATpJ1nnSTrAObduvaZZo77dJptNi6vlzdqPsYYZDIinLjHiSPHbacq43x7V60k6vUPcM5FZPLWvwrGF+eM+s7B7W+yn0vTjV0pnU6VTkDrbp9yyepUksP6w8Zw6tSxAUcxPQDfI85SruaeuRdw8YuN0sykT2Lwyw/hHoW/yBk9XCSTgvv+FFLH/r5Sm6kFvLvVTe4xcc48x+c3DR9m7gaVTTnnuR2r5+UMypjmY8xHKN/SQIrHPKC3KMtygsAPM46CRfURb+3Px/s3jQvvNe02kew7DA/ERgf6z2/stQPesPxAUD9ZtH7IX6EdXZcFLWd3TWDzc55clTgEh8BttugyRM/wBldIAmnetAXtXU3XXBVsdVqsCLTWCDyls9cfdPmMVa+O2IuS3O3ild593DfkNmnCLdr59xzj9lqfs2foD/AAMtPCW/GPyInR9XoLdZRQL61p1j32FC4FbjRr9prQo8MqOg3K9MmY09mB3umVL+erUAs1hrNZRAQOblJ3DMyhfMmaRx60k7PPt033S04cTKdF65eL/ZpS8JPjYPkpP+Ikq8KTxZj8OUf4GbnwvQUU/T7tSnfV6J7KV5+ULbbkjlKYO/Tx25htCdlmZgpvrpuas6hqGDN3WnLYBZlAAO42wB1x0mZY9Ju8rLjbXK/pl58TP+Farz8/0aa3CkxszA+BJDD8sCeX9l2Z6rjzy38MTaq+CXOlNiFWGpuauhSWV7ACc2YI2TAJyT0ltnCLRVfaShXTWii3lYuefbOMDGBkZJxJVile20ucue03cKLfPOprY4SfGwf2T/AJyG7h1i9BzjzXr+XWZvkOC2DyqcM2DhT6noJQGSddNameog9DWDtsdj5HaVmzHfrv8AHf8AjPPboq2+7g+a4X/QyRV1vRG8M9zMLp7nrcWVO1di/ZsrZkYfBhvN67Pe1XW6fC6oLrKgN2bFdwHnzj3W+Yz6zSr9BYuTjmUeI328yOomzezLsv8AtDWBrBnS6YrZdnOLH6pUD06jmPoMfelyjOTf2spVoJJuaO78K141OnpvFb1C6tbBXaArqGGQGAJwcesleStIXnQOaQvIjJXkRmQUiIgASRZHL1gE6GTrPMhk6GAeLtBqdRVprbNLWLbkXKo3NuB1wBuTjoPGcEHLlmVVXnYueRQq+8c7DwG+w8J9GrOS+0Psx9GtOqpX6i5/rFA2qtP/ACsfyJx4ic/HU5SjtLRbjo9H1Yxk4tZvR+xps27gttlmlCaJ7aLqlsF3d00BbbmOUZ7rdgAPujff0GdQmV4dxnuqjU+nTUILhegsLLyWAYBIA98bA4M4OIhKcLRV3da2tv4nUrRckrG6arS3/S7bhWz93wo01MCp57yxJA9dh185BwhF0tWj+tVKKKrm1b12IVs1ICoa3Oct1fAA6qPSaj+3LSusDAM+sKF7ASpTlfOFA8Me7j4TF8o8pVhgXsuMn5d1vd28890Kw8mrN82/n0Nl1+r0f0XTpW/eLT9IYUGsoWvckKzD7qDmY4zk+6POYzR8QWnSautebvtRyIGGAFpXc+9nOTlug8pjSZlV4Kz8vdWo/OodThx7jWipOgJBNnMpBAC8hyd50KeH2lZZ533cb8FvZI1CCtJmc41xBtLq6r1QW16jQV1F+fk73H2mWxckMMrv6zEJx4CwP3HMAyPizU3O7WIcoz2ndlXfCYC5JOMyMcM7u7TJcC9d9iovI5rwrNWBYGZTlcWA9N8dRKjg4apbu9WrvEtdajyWFQnQF+dQQcN7xC4x0ORFPA7MbWz03r34Mjj1SSvn2+fiejUdpmdOU6anI1J1Ne9vKtpycsmfrDkk5JxnG2wk2o7UJZ9J5tGAdUirYV1FgZgBjlLY2XG2Fx1Piczxa/hFaKXr1IszqO6SooA3ITs5dWK7jfHkQdukargypaQbfqzTqbgwUHlFYblHUl9wN8DO+POZ/wDnxTyj6v54r0CdG1/ndYyo7U0Fi/c2VONIdPU9ZrfuM9e7Q4AHQ5JP2V2wJ5+GcVoWjUIWNGUFNC8jXctDH61thhrWO5LbZC+Ani1HZ61MZeok82F53ySLlqUD3cEszqBvsTuRMfrdK1Lmt+UsADlHV1IIyMMJHLAqCtZpZenff17eLMqNKWUWb3orkUldLdXbptNp1Felptrd77m25reYbbgePXJPlPFXwqo29xqa0v1VudTrHV2or0dPkpX+BxnqTjE0kgHqMz1aPX20ljW/KXXkfIVw6+TBgQZV+klFPYlm/B+at2t8Xa7srD6dr8Xzz5me0/DtGov1dqN9C7zl0YZ8NqDynoDgspOSDkbDyyZrmpKF3NYKoWYoDnIXOwOST09TMlq+0F1q186IbaqzWtxUsQD1YITyBzj7XLnyxMRLNKMldzeffdZfOre97kSU4yX5fsrNu9nfFtXXcmk09aNTY5stDIE7tTu9nOoyT0AznflGw6aiiliFUFmYhVVRksxOAAPPM7R2K7OjRUe/g6i0Br2Hh5Vg+S5PxOT4zo4GnKVS6dlvIMdUhGnZq7enzz3GwsZC8lYyFzO2cIiaRmXtIzAEREAS5ZbAgE6mSoZ51MmUwD0KZZrNKl1b1WIHrsUq6noVIlUMlBgHCu1PAH0OoNTZatstTYfv1+v9IE4PyPjMNO7dqOB167TvU/uuPepsxvXaBsfhvgjxBM4fqtM9Vj1WryvWxR18mH8R0IPiCJw8XQ6qV1ozvYPE9bGz/Jevb8/yQxKFwCASAT0Gdz8BMjpuB6u3+b0lz+oqdR+bACVoxlL8VctNqOrt35HglwsYYwxGAVA5jspJJA8gSSSPEkzYdP2E4k/XTCv/AHl1Q/4SZ76vZrrj9qyhPTnsY/oklWHrPSLIZYqitZI0zHpHKPL9Jt3GuwzaPTvqNRrKwFwAiUsxsc9EUlxufht18Jp3een6zSdKdN2kjeFaFRXi7+fuX4jlHlM52R4EnEHsq+kdxag51U184dOhIPMNweo9RNlb2W2eGsT56dv/ANJvDC1Zrairmk8XShK0nZ9z+DQOY4xnbrjJx1z/ABAPylbLGYlnZnY9Wdmdj8WO5m72+zDVD7Gppf8AeWyv+AaeK32dcQXotT/uXEZ/tKJl4asv9X6GFiqDeUlz4GpRM3d2S4in2tFZjzTkt/4GJ/SYnVad6v56t6t8fWo1e/8AWAkTpzjqn5MmjUjL8Wn4oilZaDnpv8N5tHYTs39Nv57VzpqGBsB/2r7EV+o8T6YHjFODqSUYmKlSNOLlLRGx+zbsvyga69feYfyZGH2VOR3h9SOnkPjt0MwAB0kbmegpU404qMTztWrKrNzl/Ra5kLGXsZCxkhGWMZbKmUgCIiAIiIBcpkqmQS9TAPSpkqmeZWkymAejMw+v7NaPUW99fp1ss5QuW5iCBnGVzg9fETKAy8GauKeoTad0zzaPQU0jFNKVDGMVoqbfIT1xEyYYkV1qorM5CqqlmYnAVQMkk+WJITOW+03tRzs2gob3FI+lMPvN1FQPkOreox5iR1aipx2mSUqTqy2Ua7217SHX6jmGRp6iy0KdsjxsI82xt5DHiTNr7MdglfQ2nVDlv1VY7vb3tMuQyH9/IBYf1fPOL9m3Zf6RYNXeuaKW+qU9LrlP2v3VP5t8DnrolXD0XO9Se8t4msoJUqeVtee/U+eKrL9DqgcBNRpbSCpJ5Sw2IJ8VYHr5Nmd44NxOvVUV6io5SxcgHqp6FT6ggg/CaN7Vuz+VGvqXdAqakDO9eTy2Y9CcE+R9JiPZj2g+j6j6LY2KdSfcJP2NRsAPgw2+IHnNKT6ir1b0ehvWSr0usWq19/k7BECJ0TmiUMrEAxGt7N6K7+d0tTH8XIEb+0uDPTwzh1WmqWqlBWiZ5VBJ3LEkkncnJO5857SZGxmFFLOxttSatfIM0iYyrGRM02MFrGRMZcxkZMAREQBERAEREASolIgEimSq084MvDQD1K0kVp5VaSBoB6QZdmQBpeGgGqe0DtP9Co7uo/ym8EV9Pqk6G0/DoB4n0BnMeyvAX1+pWoEhAQ+ot3JVM77/AI23Az6nfE6h2t7G18Qeu3vWptRe75godWTJbBUkbgk7g+JmU7M8Bq0FApqyxLFrLGxzWMfE48hgAeAEp1KEqlW8vxRcp140qVo/kzI6LSpTWlVahK61Coo6BQJ6JSVlspEV9KurI4DIylWUjIZSMEH5TgvajgbaDVPTluT7ensyctX4HP4lOxPmAfGd/mtdtOzQ4hQqhhXdU3NVYwyN9mRsb8p2+YB8JXxNHrYZa7izha/VTz0fNynYXtF9O0oLkd/SRXeM9T91/gw39DkeE2aaT2D7I26B7rbrVZrFVAlfMQAGzkkgZPy2385umZJS2nBbepHVUNt7DyLpaTLS0sLSUjLmaRs0ozSNmgBmkbGCZYTAKEykRAEREAREQBERAEREASoMpEAkDS8NIBLgYB6A0vDTzhpcGgHpDSoaecNLg0An5pXmkHNK88Am5pTmkXNKc0AlLShaRc0oWgF5aWlpYWlhaAXFpYWlCZYTAKkykRAEREAREQBERAEREAREQBERAEREAqDKgy2IBfzS4NIpXMAlDRzSLMZgEvNHNIsxmASc0oWlmZSAXEymZSIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAf/Z" data-deferred="1" class="rg_i Q4LuWd" jsname="Q4LuWd" width="100" height="100" alt="Restaurant Logos Png Template Download on Pngtree | Logo restaurant, Hand  logo, Restaurant" data-atf="true" data-iml="2142.199999988079">
-            </div>
-            <meta name="viewport" content="width=device-width,initial-scale=1">
-            <li><a href="{% url 'home' %}">HOME</a></li>
-            <li><a href="#program">MENU</a></li>
-            <li><a href="{% url 'demo' %}">CONTACT US</a></li>
-            <a href="mailto:kcharanreddy69@.com">EMAIL US</a>
-        </ul>
- 
-    </nav>
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="web">HOME</h1>
-                <p class="text-small">
-                  <b>Welcome</b>
+    <header>
+		<!-- <i><h1 id="top">STORE <sub>SHOPEE</sub></h1></i> -->
+	</header><hr><hr>
+	<nav id="navbar">
+		<ul id="navcontent">
+			<u><li><a href="{% url 'home' %}">Home</a></li></u>
+			<u><li><a href="{% url 'demo' %}">ContactUs</a></li></u>
+		</ul>
+	</nav>
+    <!-- <br><br><br><br> -->
+    <section>
+        <section id="Products">
+            <div class="container mt-3">
 
-                  <br>Restaurant Blatnice is one of the oldest Czech restaurant in Prague center, which offers traditional Czech specialties which you can enjoyed in the pleasant air conditioned ambience.
-                  
-                  The traditional Czech restaurant, of course, also include classic Czech wine, so we can offer a wide selection of Moravian bottled wines and complete selection of barrel wines .This wines are imported by us directly from Moravian vineyards and from Blatel, as based in St. Blatnice. Anthony, who continues the long tradition of wine growing.
-                  
-                  With traditional Czech food must drink the typical Czech beer and so we offer the most famous Czech beer brand Pilsner Urquell and not just light "Twelve", but also unpasteurized light Gambrinus "Ten", but also a black Kozel......</br>
-                </p>
- 
- 
+                <!-- <p>Image at the top (card-img-top):</p> -->
+                <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJcCIQLnvKrZuXZmwvr_LUsbCZZvQ8EhdQw&amp;usqp=CAU" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">kg/99&#8377</h4>
+                    <p class="card-text">Aparanji Mangoes</p>
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                </div>
+                </div>
+                <br>
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7LX_xmt5txnTv3bH-Id1_TZH3OqQtfL4eQ&amp;usqp=CA" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">kg/177&#8377</h4>
+                        <p class="card-text">Alphonse Mangoes</p>
+                        <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                    </div>
+                </div>
+                <br>
+
+                
+                <!-- <p>Image at the bottom (card-img-bottom):</p> -->
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__bGurekFGVc8W0aYx-WAEwhOW1e7mpbZ_Q&amp;usqp=CAU" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">kg/120&#8377</h4>
+                    <p class="card-text">Banginapalli Mangoes</p>
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                </div>
+            
+                </div>
             </div>
-        </div>
+            <hr><hr>
     </section>
- 
-    <section class="secondsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="program">
-                    MENU
-                </h1>
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/23ace846-0154-4ff3-a935-1dd717c665fa/dec1wg6-36b862ff-80f4-4a01-9205-1baa47446e03.png/v1/fill/w_1280,h_854,q_80,strp/restaurant_menu_card_design_by_mdattaind_dec1wg6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvMjNhY2U4NDYtMDE1NC00ZmYzLWE5MzUtMWRkNzE3YzY2NWZhXC9kZWMxd2c2LTM2Yjg2MmZmLTgwZjQtNGEwMS05MjA1LTFiYWE0NzQ0NmUwMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CLVqhtkplKP3q0CGTw6Q-W1HIUAeKxH8nPNIXmEWcEE" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Restaurant Menu Card Design by mdattaind on DeviantArt" data-noaft="1" style="width: 800px; height: 600.183px; margin: 0px;">
-      
- 
- 
-            </div>
-        </div>
-    </section>
- 
-    <section class="section">
-        <div class="paras">
-            <h1 class="sectionTag text-big">CONTACT US</h1>
- 
-            <p class="sectionSubTag text-small">
-                Charan REDDY 511/6-8
-                110 00, BKP 1
-                Tel.: +420 224 225 836
-                E-mail foodcircles02@seznam.cz
-            </p>
- 
- 
-        </div>
- 
-        <div class="thumbnail">
-            <img src= "img.png" alt="laptop image">
-        </div>
-    </section>
- 
-    <footer class="background">
-        <p class="text-footer">
-            Copyright ©-All rights are reserved
-        </p>
- 
- 
-    </footer>
 </body>
- 
 </html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Float four columns side by side */
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    .row {margin: 0 -5px;}
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Navigation bar styling*/
+
+    /*Navbar image styling*/
+    #navbar img{
+        display:block;
+        width: 50px;
+        height:50px;
+        margin:auto;
+        margin-bottom: 3px;
+    }
+
+    /*Navbar Functionality*/
+    #navbar{
+        display:flex;
+        flex-direction: column;
+        background-color: darkblue;
+        height: 14vh;
+        width: 100vw;
+        font-family: 'Ubuntu Mono', monospace;
+        margin-top:10px;
+    border: 2px solid black;
+    border-radius:15px;
+    }
+
+
+    /*Navbar content functionality*/
+    #navcontent{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /*Navbar content styling*/
+    ul li{
+        list-style: none;
+        margin: 15px;
+        border-radius: 20px;
+    }
+    ul li a{
+        padding: 1px;
+        color:white;
+        text-decoration: none;
+        border-radius:10px;
+    }
+    ul li a:hover{
+        background-color: red;
+        border-radius: 10px;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+        .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        }
+    }
+    
+    /* Style the counter cards */
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+    
+    form {
+      padding: 8px;
+      margin: 25px;
+      
+      /* other styling */
+      background-color: #33475b;
+      border-radius: 10px;
+      color: white;
+      font-family: Arial;
+    }
+    </style>
