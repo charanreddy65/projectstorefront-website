@@ -4,35 +4,40 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-	content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<link
-	href="https://fonts.googleapis.com/css2?
-	family=Ubuntu+Mono&display=swap"
-	rel="stylesheet">	
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>storefront </title>
+    <link rel='icon' href='C:\Users\Lenovo\Pictures\images\favicon.ico' type='ico/image'/>
 </head>
 
 <body>
 
 	<header>
-		<h1 id="top">Online</h1>
-		<h1 id="top1">store shopping</h1>
+		<i><h1 id="top"><sub>&larr;</sub>STORE <sub>SHOPEE</sub>&rarr;</h1></i>
 	</header>
 	<hr>
+    <hr>
 	<nav id="navbar">
 		<ul id="navcontent">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="{% url 'food' %}">Menu</a></li>
-			<li><a href="{% url 'demo' %}">ContactUs</a></li>
+			<u><li><a href="#">Home</a></li></u>
+			<u><li><a href="#">About</a></li></u>
+			<u><li><a href="{% url 'food' %}">Menu</a></li></u>
+			<u><li><a href="{% url 'demo' %}">ContactUs</a></li></u>
 		</ul>
 	</nav>
 	<div id="container1">
 		<div id="row1">
-			Welcome to Online FoodShop
+			
 		</div>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <h2><i><b>""" garden fresh farm mangoes """ </b></i></h2>
+        <marquee  behavior="scroll" direction="left">
+        <img src="https://nurserynisarga.in/wp-content/uploads/2020/09/pexels-ashan-rai-26677382.jpg"
+            style="width: 383px; height: 383px; margin: 0px;">
+            <img style="width: 383px; height: 383px; margin: 0px;" alt="What are Alphonso Mangoes? How to Prepare &amp; Recipes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJcCIQLnvKrZuXZmwvr_LUsbCZZvQ8EhdQw&amp;usqp=CAU">
+            <img style="width: 383px; height: 383px; margin: 0px;" alt="6,271 Alphonso mango Images, Stock Photos &amp; Vectors | Shutterstock" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7LX_xmt5txnTv3bH-Id1_TZH3OqQtfL4eQ&amp;usqp=CAU">
+            <img style="width: 383px; height: 383px; margin: 0px;" alt="Order Online - Fresh &amp; Original Devgad Alphonso Mangoes directly from Our  Farms - www.Prajaagro.com" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__bGurekFGVc8W0aYx-WAEwhOW1e7mpbZ_Q&amp;usqp=CAU">
+        </marquee>
+        
 
 	</div>
 	<footer>Copyright © 2020-2022 OnlineFoodShop.
@@ -41,7 +46,7 @@
 </html>
 
 <style>
-    /*CSS Reset*/
+/*CSS Reset*/
 *{
     margin:0px;
     padding:0px;
@@ -49,7 +54,7 @@
 /*Header Styling*/
 
 #top{
-    color:rgb(245, 10, 10);
+    color:rgb(8, 11, 12);
     text-align:center;
     font-size:46px;
     font-family: 'Ubuntu Mono', monospace;
@@ -75,7 +80,7 @@
 #navbar{
     display:flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: darkblue;
     height: 14vh;
     width: 100vw;
     font-family: 'Ubuntu Mono', monospace;
@@ -120,7 +125,7 @@ ul li a:hover{
 }
 
 /*Setting the background image using before pseudo selector*/ 
-#container1::before{
+/* #container1::before{
     content:'';
     background: url("./1.jpg") no-repeat center center/cover;
     width: 100vw;
@@ -135,7 +140,7 @@ ul li a:hover{
     opacity: 0.89;
     border: 2px solid black;
     border-bottom-left-radius: 100px;
-}
+} */
 
 #row1{
    color: black;

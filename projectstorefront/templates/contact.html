@@ -6,7 +6,7 @@
 	<meta name="viewport" content=
 		"width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="style.css">
+	<link rel='icon' href='C:\Users\Lenovo\Pictures\images\favicon.ico' type='ico/image'/>
 	<title>ContactUs</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -55,22 +55,38 @@
 					id="pho"
 					placeholder="Enter your Phone no">
 			</div>
-			<div id="radio">
-				Are you a member of OnlneFoodShop:
-				Yes <input type="radio" name="eligible">
-				No <input type="radio" name="eligible">
-			</div>
 			<div class="form-shape">
 				<label for="message">
-					Ellaborate your query
+					<address>ADDRESS</address>
 				</label>
 				<textarea name="mesg" id="message"
-					cols="30" rows="10">
+					placeholder="enter your address here">
 				</textarea>
 			</div>
+Select Options: 	<select name="item">
+			<option value="alphonse mangoes" selected="selected">Alphonse mangoes</option>
+			<option value="banginapalli mangoes" selected="selected">Banginapalli mangoes</option>
+			<option value="aparanji mangoes" selected="selected">Aparanji mangoes</option>
+			</select>
+Select kilograms: 	<select name="weigh" >
+			<option value="5" selected="selected">5</option>
+			<option value="10" selected="selected">10</option>
+			<option value="20" selected="selected">20</option>
+			<option value="30" selected="selected">30</option>
+			<option value="40" selected="selected">40</option>
+			<option value="50" selected="selected">50</option>
+			</select>
+			<br><br>
+
+			<script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_KKAiicI0vwDEQ3" async> </script>
+			<br><br>
+			<em><b>Click Pay Now and Submit:</b></em>
 			<input type="submit" value="Submit">
-			<input type="reset" value="Reset">
+			<!-- <input type="reset" value="Reset"> -->
 		</form>
+		
+		
+		<!-- <u><li><a href="{% url 'home' %}">Home</a></li></u> -->
 	</div>
 </body>
 

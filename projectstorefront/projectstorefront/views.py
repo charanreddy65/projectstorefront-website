@@ -15,9 +15,11 @@ def demo(request):
         name = request.POST['myName']
         email = request.POST['myEmail']
         phone = request.POST['myPhone']
-        # image = request.FILES.get('myimage')
+        address = request.POST['mesg']
+        selected_items = request.POST['item']
+        selected_kgs = request.POST['weigh']
 
-        k = Contact(name=name,email=email,phone=phone)
+        k = Contact(name=name,email=email,phone=phone,address=address,selected_items=selected_items,selected_kgs=selected_kgs)
         k.save()
         return redirect("food")
     return render(request,"contact.html")
@@ -25,4 +27,6 @@ def demo(request):
 def food(request):
     # online=Online_Shoping.objects.all()
     return render(request,"store.html")
+
+    
 
